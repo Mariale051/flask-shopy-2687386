@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Listar</title>
+  </head>
+  <body>
+    {% if clientes %}
+       <h1> Clientes Registrados</h1>
+       {% else %}
+       {% endif%}
+       <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Nombre Cliente</th>
+                <th>email<th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for cliente in clientes %}
+                <tr>
+                    <td>  {{ cliente.username }}  </td>   
+                    <td>  {{ cliente.email }}  </td>
+                </tr>
+                {% endfor %}                                  
+           </tbody>
+  </body>
+</html>
